@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Birthday Journal</title>
+  <meta name="description" content="Birthday Journal — simple app to remember birthdays and celebrate friends.">
+  <style>
+    :root{--bg:#ffffff;--text:#111;--muted:#666;--accent:#0b84ff}
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;margin:0;background:var(--bg);color:var(--text);}
+    .container{max-width:900px;margin:32px auto;padding:24px}
+    header{display:flex;gap:16px;align-items:center}
+    .logo{width:72px;height:72px;border-radius:14px;background:linear-gradient(135deg,#0b84ff22,#0b84ff11);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent)}
+    h1{margin:0;font-size:1.6rem}
+    p.lead{color:var(--muted);margin-top:6px}
+    .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin:18px 0}
+    .card{border:1px solid #eee;padding:14px;border-radius:10px;background:#fafafa}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;text-decoration:none;border:1px solid #e6e6e6;background:white}
+    .btn.primary{background:var(--accent);color:white;border:none}
+    footer{margin-top:28px;color:var(--muted);font-size:0.95rem}
+    a{color:var(--accent)}
+    @media (max-width:520px){.container{margin:16px;padding:16px}.logo{width:56px;height:56px}}
+  </style>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <div class="logo">B</div>
+      <div>
+        <h1>Birthday Journal</h1>
+        <p class="lead">Remember and celebrate the people you care about — reminders, notes, and easy birthday lists.</p>
+      </div>
+    </header>
+
+    <section class="features">
+      <div class="card">
+        <h3>Simple & private</h3>
+        <p class="muted">No unnecessary permissions. Your data stays on your device unless you choose otherwise.</p>
+      </div>
+    </section>
+
+    <div class="actions">
+      <!-- Replace the href below with your App Store URL once available -->
+      <a class="btn primary" href="https://apps.apple.com/ca/app/birthday-journal/id6754396198" id="appstore-link">View on the App Store</a>
+      <a class="btn" href="https://adhitya-93.github.io/birthdaytrackerapp/privacy.html">Privacy Policy</a>
+      <a class="btn" href="https://adhitya-93.github.io/birthdaytrackerapp/support.html">Contact Support</a>
+    </div>
+
+    <section style="margin-top:20px">
+      <h3>About this page</h3>
+      <p class="muted">This page is the public marketing URL for the <strong>Birthday Journal</strong> app. Apple will display the provided Marketing URL on the App Store listing as the developer website. For app-ads.txt verification (AdMob), the file <code>/app-ads.txt</code> must be available at the root of this domain: <strong>https://adhitya-93.github.io/app-ads.txt</strong>.</p>
+      <p class="muted">If you host this as a GitHub Pages site in the <code>adhitya-93.github.io</code> repository, add <code>index.html</code> to the repository root and upload <code>app-ads.txt</code> alongside it so Google can verify authorized sellers.</p>
+
+      <h4 style="margin-top:12px">app-ads.txt example (save as <code>app-ads.txt</code> at site root):</h4>
+      <pre style="background:#f3f3f3;padding:10px;border-radius:8px">google.com, pub-1234567890123456, DIRECT, f08c47fec0942fa0</pre>
+    </section>
+
+    <footer>
+      <p>© <span id="year"></span> Birthday Journal — Built by Adhitya Arivazhahan.</p>
+    </footer>
+  </main>
+
+  <script>
+    // small script to populate year and optionally set app store link
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // If you have your App Store link, set it here
+    // document.getElementById('appstore-link').href = 'https://apps.apple.com/ca/app/birthday-journal/id6754396198';
+  </script>
+</body>
+</html>
